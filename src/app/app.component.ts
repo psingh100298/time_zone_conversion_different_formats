@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TimeconversionService } from './timeconversion.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'datetimeformat';
+  constructor(private timeConversionService:TimeconversionService){
+    // this.datetiemconversion();
+  }
+  date =  this.timeConversionService.ddmmyy;
+  // datetiemconversion(){
+  //  this.timeConversionService.currentDate$.subscribe((res)=>{
+  //   this.date = res;
+  //   console.log("Date is", this.date);
+  //  });
+  // }
+
 }
